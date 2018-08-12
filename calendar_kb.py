@@ -141,14 +141,9 @@ class Calendar_kb:
                         self.today.month - self.today.month - 1)) / 360
         return delta
 
+    def split_year_equal(self,parts):
+        return int(round(365/parts,0))
 
 
-if __name__ == '__main__':
-    o_test_calendar=Calendar_kb(today=dt.date(2018,6,25),
-                                maturity_date=(2018,9,25),day_convention='Actual/365')
-
-    v_dates=o_test_calendar.move_dates_fun(shift=5,period='days')
-
-    print('The end of the programm')
 
 
